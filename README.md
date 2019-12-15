@@ -1,41 +1,51 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Decpl [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/decpl/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/decpl)
 
-My awesome module.
+Get the amount of decimal places in a number. (Based on https://stackoverflow.com/a/9539746/8384910)
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/decpl.png)](https://npmjs.com/package/decpl)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install decpl
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const decpl = require("decpl");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+decpl(5555.0);
+//=> 0
+
+decpl(5555);
+//=> 0
+
+decpl(555.5);
+//=> 1
+
+decpl(555.50);
+//=> 1
+
+decpl(0.0000005);
+//=> 7
+
+decpl(5e-7);
+//=> 7
+
+decpl(0.00000055);
+//=> 8
+
+decpl(5.5e-7);
+//=> 8
 ```
 
 ## API
 
-### theModule(input, options?)
+### decpl(number)
 
-#### input
+#### number
 
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The number to process.

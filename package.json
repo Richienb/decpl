@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "decpl",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Get the amount of decimal places in a number.",
+    "repository": "https://github.com/Richienb/decpl.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,13 +11,18 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=4"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
+    "keywords": [
+        "decimal",
+        "places",
+        "number",
+        "math"
+    ],
     "dependencies": {},
     "devDependencies": {
         "ava": "^2.1.0",
@@ -28,6 +33,14 @@
         "eslint": "^6.6.0"
     },
     "xo": {
-        "extends": "richienb/node"
+        "extends": "richienb/node",
+        "overrides": [
+            {
+                "files": "test.js",
+                "rules": {
+                    "unicorn/no-zero-fractions": 0
+                }
+            }
+        ]
     }
 }
