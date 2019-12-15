@@ -1,6 +1,6 @@
 {
     "name": "decpl",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Get the amount of decimal places in a number.",
     "repository": "https://github.com/Richienb/decpl.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
